@@ -35,3 +35,7 @@ def webhook():
         app.logger.error("Telegram credentials not configured")
 
     return {"status": "ok"}
+
+@app.route('/ping', methods=['GET'])
+def ping():
+    return {"status": "alive"}
